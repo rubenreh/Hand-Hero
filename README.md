@@ -2,10 +2,6 @@
 
 **Hand Hero** is an assistive technology project aimed at enhancing accessibility for individuals with disabilities through intuitive hand gestures. This project combines hand gesture recognition with Arduino-based control to operate a motor, sound a buzzer, and illuminate an LED, making everyday tasks easier.
 
-## Project Overview
-
-Hand Hero integrates computer vision and embedded systems to offer a gesture-based control solution. Using OpenCV for gesture recognition and an Arduino for device management, Hand Hero allows users to control mechanical and electronic devices with simple hand movements.
-
 ## Usage
 
 1. **Run the C++ Application**: Launch the C++ program to start hand gesture recognition. The application will use the webcam to capture and analyze hand movements.
