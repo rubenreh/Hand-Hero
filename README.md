@@ -6,8 +6,8 @@
 
 1. **Run the C++ Application**: Launch the C++ program to start hand gesture recognition. The application will use the webcam to capture and analyze hand movements.
 2. **Perform Gestures**:
-   - **Thumbs Up**: The system will activate the motor to open a door and light up the LED.
-   - **Fist**: The system will sound the buzzer and illuminate the LED.
+   - **Thumbs Up**: The system will activate the motor to unlock a door and light up the LED.
+   - **Fist**: The system will sound the buzzer and illuminate the LED in case of an emergency.
 3. **Monitor Feedback**: Observe the responses of the motor, buzzer, and LED to ensure the system is working as expected.
 
 ## Features
