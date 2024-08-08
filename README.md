@@ -6,6 +6,14 @@
 
 Hand Hero integrates computer vision and embedded systems to offer a gesture-based control solution. Using OpenCV for gesture recognition and an Arduino for device management, Hand Hero allows users to control mechanical and electronic devices with simple hand movements.
 
+## Usage
+
+1. **Run the C++ Application**: Launch the C++ program to start hand gesture recognition. The application will use the webcam to capture and analyze hand movements.
+2. **Perform Gestures**:
+   - **Thumbs Up**: The system will activate the motor to open a door and light up the LED.
+   - **Fist**: The system will sound the buzzer and illuminate the LED.
+3. **Monitor Feedback**: Observe the responses of the motor, buzzer, and LED to ensure the system is working as expected.
+
 ## Features
 
 - **Gesture Recognition**: Detects and interprets hand gestures using OpenCV.
