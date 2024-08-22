@@ -1,6 +1,8 @@
 # Hand Hero
 
-![Hand Hero Logo](https://github.com/rubenreh/Hand-Hero/blob/main/HandHeroLogo.png?raw=true)
+<p align="center">
+  <img src="https://github.com/rubenreh/Hand-Hero/blob/main/HandHeroLogo.png?raw=true" alt="Hand Hero Logo">
+</p>
 
 **Hand Hero** is an assistive technology project aimed at enhancing accessibility for individuals with disabilities through intuitive hand gestures. This project combines hand gesture recognition with Arduino-based control to operate a motor, sound a buzzer, and illuminate an LED, making everyday tasks easier.
 
