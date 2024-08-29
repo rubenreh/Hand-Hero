@@ -14,11 +14,36 @@
    - **Fist**: The system will sound the buzzer and illuminate the LED in case of an emergency.
 3. **Monitor Feedback**: Observe the responses of the motor, buzzer, and LED to ensure the system is working as expected.
 
-## Features
+## **Features and Controls**
 
-- **Gesture Recognition**: Detects and interprets hand gestures using OpenCV.
-- **Device Control**: Manages a motor, buzzer, and LED based on recognized gestures.
-- **Assistive Technology**: Designed to provide intuitive control for individuals with disabilities.
+### **1. Gesture Recognition**
+- **Simulated with Buttons:** The project uses buttons to simulate hand gestures for testing purposes. These buttons can be replaced with actual gesture sensors for a more advanced setup.
+  - **Gesture Left Button:** Simulates a "Swipe Left" gesture to move the motor in the left direction.
+  - **Gesture Right Button:** Simulates a "Swipe Right" gesture to move the motor in the right direction.
+  - **Gesture Stop Button:** Simulates an "Open Palm" gesture to stop the motor.
+
+### **2. Motor Control**
+- **Direction Control:**
+  - **Move Motor Left:** Activates when the "Swipe Left" gesture is detected, causing the motor to rotate in the left direction.
+  - **Move Motor Right:** Activates when the "Swipe Right" gesture is detected, causing the motor to rotate in the right direction.
+  - **Stop Motor:** Activates when the "Open Palm" gesture is detected, stopping the motor completely.
+
+- **Speed Control:**
+  - **Adjustable Speed:** The speed of the motor is controlled using Pulse Width Modulation (PWM). The motor speed can be adjusted by changing the PWM value sent to the motor driver.
+
+### **3. Accessibility Enhancement**
+- **Hands-Free Operation:** Designed to reduce physical strain by allowing users to control the motor through gestures, making it suitable for individuals with limited mobility or dexterity.
+- **Intuitive Interaction:** Simplifies the control of devices or machinery by using hand gestures, providing a more user-friendly interface.
+
+### **4. Modular Design**
+- **Sensor Integration:** Can be expanded to include various gesture sensors (e.g., IR or ultrasonic) for real-time gesture detection.
+- **Versatile Applications:** Adaptable for different use cases, from home automation to assistive devices.
+
+### **5. User Feedback**
+- **Serial Monitoring:** Provides real-time feedback on motor status (moving left, moving right, stopping) via the Arduino serial monitor, aiding in debugging and monitoring.
+
+### **6. Customization**
+- **Easy Configuration:** Users can easily modify the code to adjust motor speed, change gesture mappings, or integrate additional features based on their needs.
 
 ## Components
 
