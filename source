@@ -1,0 +1,67 @@
+// Define pin connections
+const int motorPin1 = 5; // Motor driver input 1
+const int motorPin2 = 6; // Motor driver input 2
+const int enablePin = 9; // PWM pin for speed control
+
+// Define pins for gesture inputs (simulate gestures with buttons)
+const int gestureLeftPin = 2; // Simulate "Swipe Left" gesture
+const int gestureRightPin = 3; // Simulate "Swipe Right" gesture
+const int gestureStopPin = 4; // Simulate "Open Palm" gesture (stop motor)
+
+// Motor speed variable
+int motorSpeed = 255; // Max speed (0-255)
+
+void setup() {
+    // Set motor control pins as outputs
+    pinMode(motorPin1, OUTPUT);
+    pinMode(motorPin2, OUTPUT);
+    pinMode(enablePin, OUTPUT);
+
+    // Set gesture pins as inputs with pull-up resistors
+    pinMode(gestureLeftPin, INPUT_PULLUP);
+    pinMode(gestureRightPin, INPUT_PULLUP);
+    pinMode(gestureStopPin, INPUT_PULLUP);
+
+    // Initialize motor state
+    stopMotor();
+}
+
+void loop() {
+    // Read gesture inputs
+    bool gestureLeft = digitalRead(gestureLeftPin) == LOW;
+    bool gestureRight = digitalRead(gestureRightPin) == LOW;
+    bool gestureStop = digitalRead(gestureStopPin) == LOW;
+
+    // Respond to gestures
+    if (gestureLeft) {
+        moveMotorLeft(); // Respond to "Swipe Left"
+    } else if (gestureRight) {
+        moveMotorRight(); // Respond to "Swipe Right"
+    } else if (gestureStop) {
+        stopMotor(); // Respond to "Open Palm"
+    }
+}
+
+// Function to move motor left
+void moveMotorLeft() {
+    digitalWrite(motorPin1, LOW); // Motor direction
+    digitalWrite(motorPin2, HIGH);
+    analogWrite(enablePin, motorSpeed); // Set motor speed
+    Serial.println("Moving Left");
+}
+
+// Function to move motor right
+void moveMotorRight() {
+    digitalWrite(motorPin1, HIGH); // Motor direction
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, motorSpeed); // Set motor speed
+    Serial.println("Moving Right");
+}
+
+// Function to stop the motor
+void stopMotor() {
+    digitalWrite(motorPin1, LOW); // Motor stop
+    digitalWrite(motorPin2, LOW);
+    analogWrite(enablePin, 0); // Speed 0
+    Serial.println("Stopping Motor");
+}
