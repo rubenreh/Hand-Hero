@@ -1,0 +1,26 @@
+
+# Author: Ruben Rehal
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hand-hero-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: hand-hero
+  template:
+    metadata:
+      labels:
+        app: hand-hero
+    spec:
+      containers:
+        - name: backend
+          image: handhero/cpp-backend:latest
+          ports:
+            - containerPort: 8000
+        - name: frontend
+          image: handhero/web-ui:latest
+          ports:
+            - containerPort: 80

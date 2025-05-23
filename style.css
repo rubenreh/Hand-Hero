@@ -1,0 +1,16 @@
+
+/* Author: Ruben Rehal */
+body {
+  background-color: #f8f9fa;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+h1 {
+  color: #007bff;
+}
+
+#tracker {
+  border: 2px solid #333;
+  margin-top: 10px;
+}
